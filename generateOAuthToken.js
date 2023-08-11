@@ -2,7 +2,7 @@ const axios = require('axios');
 
 async function generateOAuthToken() {
   try {
-    const tokenUrl = 'https://oauth.example.com/token'; // Replace with the actual token endpoint
+    const tokenUrl = 'https://haleon-cpi-dev-7ua1w2tv.authentication.eu20.hana.ondemand.com/oauth/token'; // Replace with the actual token endpoint
     const clientId = process.env.CLIENT_ID; // Set this as a repository secret
     const clientSecret = process.env.CLIENT_SECRET; // Set this as a repository secret
     const grantType = 'client_credentials'; // or other grant type as needed
