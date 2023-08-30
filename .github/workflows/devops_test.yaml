@@ -31,7 +31,6 @@ jobs:
           TOKEN="${{ steps.oauth.outputs.token }}"
           API_URL="https://haleon-cpi-dev-7ua1w2tv.it-cpi005.cfapps.eu20.hana.ondemand.com/api/v1/IntegrationPackages"
 
-          npm install
           npm install axios
           node - <<EOF
           const axios = require('axios');
