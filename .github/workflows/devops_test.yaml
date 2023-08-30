@@ -21,7 +21,7 @@ jobs:
       - name: Get OAuth Token
         id: oauth
         run: |
-          OAUTH_TOKEN_URL='https://haleon-cpi-dev-7ua1w2tv.authentication.eu20.hana.ondemand.com/oauth/token';
+          OAUTH_TOKEN_URL='https://haleon-cpi-dev-7ua1w2tv.authentication.eu20.hana.ondemand.com/oauth/token?grant_type=client_credentials';
           OAUTH_RESPONSE=$(curl -s -X GET "$OAUTH_TOKEN_URL" -H 'Authorization: Basic c2ItZTMyNzJjNWQtZGVkNy00Yjk3LTk4ZjUtYjJlOTM4M2Q1ZTk4IWI3MjU3fGl0IWIyNTk6ODEwYjc3MDQtZjExNi00MDQzLWJjODctODlhOTYxNDk4NGI2JFJPLUtmOUQ3a2hqclAwMTR4Z1RYQndwYUx5TDlkU2Jmb1V6NUVUZEdtUEE9')
           OAUTH_TOKEN=$(echo "$OAUTH_RESPONSE" | jq -r '.access_token')
           echo "::set-output name=token::$OAUTH_TOKEN"
