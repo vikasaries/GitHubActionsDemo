@@ -37,7 +37,7 @@ jobs:
 
           async function makeApiCall() {
             try {
-              const response = await axios.get(API_URL, {
+              const response = await axios.get("https://haleon-cpi-dev-7ua1w2tv.it-cpi005.cfapps.eu20.hana.ondemand.com/api/v1/IntegrationPackages", {
                 headers: {
                   Authorization: "Bearer ${TOKEN}"
                 }
