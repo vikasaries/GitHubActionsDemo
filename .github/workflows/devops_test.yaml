@@ -37,14 +37,14 @@ jobs:
 
           async function makeApiCall() {
             try {
-              const response = await axios.get(API_URL, {
+              const response = await axios.get(${API_URL}, {
                 headers: {
                   Authorization: "Bearer ${TOKEN}"
                   Accept: "application/json"
                 }
               });
-              OAUTH_TOKEN=$(echo response.data | jq -r '.d.results[0].Id')
-              console.log('API Response:', $OAUTH_TOKEN);
+              OAUTH_TOKEN1=$(echo response.data | jq -r '.d.results[0].Id')
+              console.log('API Response:', $OAUTH_TOKEN1);
             } catch (error) {
               console.error('API Error:', error);
             }
