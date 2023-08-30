@@ -29,7 +29,7 @@ jobs:
       - name: Use OAuth Token for API Call
         run: |
           TOKEN="${{ steps.oauth.outputs.token }}"
-          API_URL="https://haleon-cpi-dev-7ua1w2tv.authentication.eu20.hana.ondemand.com/api/v1/IntegrationPackages"
+          API_URL="https://haleon-cpi-dev-7ua1w2tv.it-cpi005.cfapps.eu20.hana.ondemand.com/api/v1/IntegrationPackages"
 
           npm install
           npm install axios
