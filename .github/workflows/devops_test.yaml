@@ -43,8 +43,8 @@ jobs:
                   Accept: "application/json"
                 }
               });
-              OAUTH_TOKEN1=$(echo response.data | jq -r '.d.results[0].Id')
-              console.log('API Response:', $OAUTH_TOKEN1);
+
+              console.log('API Response:', response.data);
             } catch (error) {
               console.error('API Error:', error);
             }
