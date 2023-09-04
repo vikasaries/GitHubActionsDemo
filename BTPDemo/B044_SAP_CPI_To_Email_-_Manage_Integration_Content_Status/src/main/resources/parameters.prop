@@ -1,0 +1,19 @@
+#
+#Mon Sep 04 13:56:42 UTC 2023
+Mail_Address=de-smtp-outbound-1.mimecast.com\:587
+From=haleoncpidev@haleon.com
+Mail_Credential=haleon-cpi-dev_Email
+S_Timeout=1
+Log\ Payload(True/False)=
+TO=monalisa.x.sikdar@haleon.com,vikas.8.agarwal@haleon.com,hidayataliansari.x.mohammed@haleon.com
+Authentication=OAuth2ClientCredentials
+Cc=
+CSRF\ Protected=true
+Credential=CPIDEV_API_OAUTH_USER
+Mail_Protection=starttls_optional
+Mail_Authentication=loginPlain
+Scheduler=<row><cell>dateType</cell><cell></cell></row><row><cell>timeType</cell><cell></cell></row><row><cell>dayValue</cell><cell></cell></row><row><cell>monthValue</cell><cell></cell></row><row><cell>yearValue</cell><cell></cell></row><row><cell>onWeekly</cell><cell></cell></row><row><cell>onMonthly</cell><cell></cell></row><row><cell>OnEveryMinute</cell><cell></cell></row><row><cell>fromInterval</cell><cell></cell></row><row><cell>toInterval</cell><cell></cell></row><row><cell>timeZone</cell><cell>( UTC 0\:00 ) Greenwich Mean Time(Etc/GMT)</cell></row><row><cell>secondValue</cell><cell>0</cell></row><row><cell>minutesValue</cell><cell></cell></row><row><cell>hourValue</cell><cell></cell></row><row><cell>triggerType</cell><cell>simple</cell></row><row><cell>noOfSchedules</cell><cell>1</cell></row><row><cell>schedule1</cell><cell>fireNow\=true</cell></row>
+CPI\ Address=https\://haleon-cpi-dev-7ua1w2tv.it-cpi005.cfapps.eu20.hana.ondemand.com/api/v1/
+ProxyType=none
+Proxy\ Type=default
+Mail_Timeout=30000

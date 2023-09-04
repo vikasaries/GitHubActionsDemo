@@ -1,0 +1,21 @@
+#
+#Mon Sep 04 13:56:41 UTC 2023
+Method=POST
+Log\ Payload(True/False)=false
+Proxy\ Type=sapcc
+Scheduler=<row><cell>dateType</cell><cell></cell></row><row><cell>timeType</cell><cell></cell></row><row><cell>dayValue</cell><cell></cell></row><row><cell>monthValue</cell><cell></cell></row><row><cell>yearValue</cell><cell></cell></row><row><cell>onWeekly</cell><cell></cell></row><row><cell>onMonthly</cell><cell></cell></row><row><cell>OnEveryMinute</cell><cell></cell></row><row><cell>fromInterval</cell><cell></cell></row><row><cell>toInterval</cell><cell></cell></row><row><cell>timeZone</cell><cell>( UTC 0\:00 ) Greenwich Mean Time(Etc/GMT)</cell></row><row><cell>secondValue</cell><cell>0</cell></row><row><cell>minutesValue</cell><cell></cell></row><row><cell>hourValue</cell><cell></cell></row><row><cell>triggerType</cell><cell>simple</cell></row><row><cell>noOfSchedules</cell><cell>1</cell></row><row><cell>schedule1</cell><cell>fireNow\=true</cell></row>
+Credential\ Name=POD
+HostName_SAPPO=http\://am01alpod101.ad.corpnet4.net\:59001
+ProxyType=none
+Mail_HostName=de-smtp-outbound-1.mimecast.com\:587
+PO\ Environment\ (POD/POQ/POR/POP)=POD
+Location\ ID=CI_DEV
+Cc=
+Mail_Credential=haleon-cpi-dev_Email
+HTTP_SAPPO_PostTimeout=60000
+Mail_Authentication=loginPlain
+Mail_Timeout=30000
+Authentication=Basic
+TO=monalisa.x.sikdar@haleon.com,vikas.8.agarwal@haleon.com,hidayataliansari.x.mohammed@haleon.com
+Mail_Protection=starttls_optional
+From=haleoncpidev@haleon.com
