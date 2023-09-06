@@ -1,4 +1,4 @@
-name: BTP Test
+name: Iflow Sync For BTP
 
 on:
   workflow_dispatch:
