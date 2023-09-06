@@ -50,4 +50,4 @@ jobs:
         run: node getoauthToken.js
            
       - name: Token generated
-        run: eco TOKEN="${{ steps.oauth.outputs.token }}"
+        run: eco TOKEN="${{ steps.oauth.outputs.oauthtoken }}"
