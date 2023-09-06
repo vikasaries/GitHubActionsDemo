@@ -46,7 +46,8 @@ jobs:
           npm install
           npm install axios
       - name: Generate OAuth Token
+        id: oauth
         run: node getoauthToken.js
            
       - name: Token generated
-        run: echo "Job 1"
+        run: eco TOKEN="${{ steps.oauth.outputs.token }}"
