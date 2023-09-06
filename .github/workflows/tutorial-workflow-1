@@ -1,1 +1,52 @@
+name: Sync Any IFlows from tenant
 
+on:
+  workflow_dispatch:
+    inputs:
+      packageId:
+        description: 'Package ID'
+        required: true
+      directory:
+        description: 'Target Git directory (relative from repository root)'
+        required: true
+      includedIds:
+        description: 'Included Ids (optional)'
+        required: false
+      excludedIds:
+        description: 'Excluded Ids (optional)'
+        required: false
+      draft:
+        description: 'Draft handling (optional) - SKIP (default value if empty), ADD, ERROR'
+        required: false
+      dirNaming:
+        description: 'Naming convention for IFlow directories (optional) - ID (default value if empty), NAME'
+        required: false
+      message:
+        description: 'Commit message (optional)'
+        required: false
+jobs:
+  generate-token::
+    runs-on: ubuntu-latest
+    env:
+      HOST_TMN: haleon-cpi-dev-7ua1w2tv.it-cpi005.cfapps.eu20.hana.ondemand.com
+      HOST_OAUTH: haleon-cpi-dev-7ua1w2tv.authentication.eu20.hana.ondemand.com
+      OAUTH_CLIENTID: ${{ secrets.CLIENT_ID }}
+      OAUTH_CLIENTSECRET: ${{ secrets.CLIENT_SECRET }}
+    steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
+        
+        - name: Set up Node.js
+          uses: actions/setup-node@v2
+            with:
+             node-version: '14'
+        
+        - name: Install dependencies
+           run: 
+            npm install
+            npm install axios
+        - name: Generate OAuth Token
+           run: node getoauthToken.js
+           
+        - name: Token generated
+            run: echo "Job 1"
