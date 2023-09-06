@@ -36,7 +36,9 @@ async function generateOAuthToken() {
 generateOAuthToken()
   .then(token => {
     console.log('Generated OAuth Token:', token);
-    console.log(`::set-output name=oauth_token::${token}`);
+    console.log(`oauthtoken=token" >> $GITHUB_OUTPUT`);
+//    console.log(`::set-output name=oauth_token::${token}`);
+    
   })
   .catch(error => {
     console.error('OAuth token generation failed:', error.message);
