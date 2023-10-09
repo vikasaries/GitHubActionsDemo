@@ -1,5 +1,0 @@
-#Store metainfo properties
-#Mon Sep 04 13:56:45 UTC 2023
-description=Interface for Certificate Expiration Notification in SAP CPI
-source=SAPCloudPlatformIntegration
-target=Office365Cloud
