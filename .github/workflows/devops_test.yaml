@@ -21,7 +21,7 @@ jobs:
       - name: Get OAuth Token
         id: oauth
         run: |
-          OAUTH_TOKEN_URL='https://haleon-cpi-dev-7ua1w2tv.authentication.eu20.hana.ondemand.com/oauth/token?grant_type=client_credentials';
+          OAUTH_TOKEN_URL='ffffff';
           OAUTH_RESPONSE=$(curl -s -X GET "$OAUTH_TOKEN_URL" -H 'Authorization: Basic fewe'
           OAUTH_TOKEN=$(echo "$OAUTH_RESPONSE" | jq -r '.access_token')
           echo "token=$OAUTH_TOKEN" >> $GITHUB_OUTPUT
@@ -29,7 +29,7 @@ jobs:
       - name: Use OAuth Token for API Call
         run: |
           TOKEN="${{ steps.oauth.outputs.token }}"
-          API_URL="https://haleon-cpi-dev-7ua1w2tv.it-cpi005.cfapps.eu20.hana.ondemand.com/api/v1/IntegrationPackages"
+          API_URL="ddddd"
 
           npm install axios
           node - <<EOF
