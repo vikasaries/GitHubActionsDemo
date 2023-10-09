@@ -30,8 +30,8 @@ jobs:
     container:
       image: engswee/flashpipe:2.x.x-lite
     env:
-      HOST_TMN: haleon-cpi-dev-7ua1w2tv.it-cpi005.cfapps.eu20.hana.ondemand.com
-      HOST_OAUTH: haleon-cpi-dev-7ua1w2tv.authentication.eu20.hana.ondemand.com
+      HOST_TMN: rrr
+      HOST_OAUTH: rrr
       OAUTH_CLIENTID: ${{ secrets.CLIENT_ID }}
       OAUTH_CLIENTSECRET: ${{ secrets.CLIENT_SECRET }}     
     steps:
